@@ -11,7 +11,10 @@ globalkeys = gears.table.join(globalkeys,
         function ()
             sl_ss_suspended = not sl_ss_suspended
             sllib.ss_suspend(sl_ss_suspended)
-            sl_fnnotify("Screensaver suspended: " .. tostring(sl_ss_suspended))
+            naughty.notify({
+                text = "Screensaver suspended: " .. tostring(sl_ss_suspended),
+                timeout = 1
+            })
         end,
         {description = "toggle suspend screensaver", group = "awesome"}
     )
