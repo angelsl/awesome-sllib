@@ -2,6 +2,8 @@
 
 Currently this just contains one function to expose `xcb_screensaver_suspend`.
 
+To use, compile and put the resulting library in `~/.config/awesome`, or wherever your `rc.lua` is. (Check that it is in Lua's `package.cpath`.)
+
 You can use it in your `rc.lua`:
 
 ```lua
